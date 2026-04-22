@@ -21,9 +21,13 @@ export default function MerciPage() {
         planning,
     } = useOnboardingStore();
 
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     // Sync différée : on renvoie tout dès le retour réseau
     useEffect(() => {
-        if (isOffline) return;
+        if (!mounted || !isOffline) return;
 
         const sync = async () => {
             try {
@@ -73,7 +77,7 @@ export default function MerciPage() {
         };
 
         sync();
-    }, [pendingSync, isOffline, leadId, contact, company, project, planning, setLeadId, setPendingSync]);
+    }, [mounted, pendingSync, isOffline, leadId, contact, company, project, planning, setLeadId, setPendingSync]);
 
     return (
         <OnboardingTemplate

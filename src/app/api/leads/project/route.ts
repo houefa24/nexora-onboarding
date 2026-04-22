@@ -10,9 +10,7 @@ const fullProjectSchema = projectSchema.merge(planningSchema).extend({
 export async function PATCH(req: NextRequest) {
     try {
         const body = await req.json();
-        console.log("[PATCH /api/leads/project] body reçu:", JSON.stringify(body));
         const parsed = fullProjectSchema.safeParse(body);
-        console.log("[PATCH /api/leads/project] validation:", parsed.success, parsed.success ? "" : JSON.stringify(parsed.error.flatten()));
 
         if (!parsed.success) {
             return NextResponse.json(
