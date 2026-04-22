@@ -23,7 +23,7 @@ export default function MerciPage() {
 
     // Sync différée : on renvoie tout dès le retour réseau
     useEffect(() => {
-        if (!pendingSync || isOffline) return;
+        if (isOffline) return;
 
         const sync = async () => {
             try {
@@ -66,7 +66,7 @@ export default function MerciPage() {
                     });
                 }
 
-                setPendingSync(false);
+                if (pendingSync) setPendingSync(false);
             } catch {
                 // On réessaiera au prochain render
             }
