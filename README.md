@@ -160,4 +160,4 @@ DATABASE_URL="file:./dev.db"
 
 ## Auteur
 
-Projet réalisé dans le cadre d'un Master 1 Développement Front-End.
+Projet réalisé par Romance DAH dans le cadre d'un Master 1 Développement Front-End.
