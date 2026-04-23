@@ -127,10 +127,10 @@ npx cypress run
 
 | Suite | Tests |
 |-------|-------|
-| Étape 1 — Contact | 3/3 ✅ |
-| Étape 2 — Entreprise | 3/3 ✅ |
-| Étape 3 — Projet | 2/2 ✅ |
-| Étape 4 — Confirmation | 3/3 ✅ |
+| Étape 1 — Contact | 3/3 |
+| Étape 2 — Entreprise | 3/3 |
+| Étape 3 — Projet | 2/2 |
+| Étape 4 — Confirmation | 3/3 |
 
 ---
 
