@@ -144,7 +144,7 @@ npm i -g vercel
 vercel
 ```
 
-> Pour la production, remplacer SQLite par PostgreSQL (Neon ou Supabase) en modifiant
+> Pour la production, remplacer SQLite par PostgreSQL (Supabase) en modifiant
 > le `provider` dans `prisma/schema.prisma` et en ajoutant `DATABASE_URL` dans les
 > variables d'environnement Vercel.
 
